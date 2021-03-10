@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message JoinMessage {
+
+    message Data {
+        string id = 1;
+        string key = 2;
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}

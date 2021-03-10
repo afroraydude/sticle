@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message GenericMessage {
+
+    message Data {
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}
