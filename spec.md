@@ -9,7 +9,7 @@ combines multiple already existing protocols to facilitate its goals.
 2. PGP for message encryption
 3. Protobuf for encoding on the socket level
 
-## Example of a encoded message
+## Example of a serialized message
 
 ```hex
 0802
@@ -19,19 +19,19 @@ client. All messages are protobuf serialized and then encrypted. The above messa
 
 
 ## Message types
-0 - Unknown message type 
-1 - Join Request
-2 - Join Approve
-3 - Join Reject
-4 - Join Channel
-5 - Join Channel Accept
-6 - Join Channel Reject
-7 - Leave Channel
-8 - User Information Request
-9 - User Information Approve/Send
-10 - User Information Reject
-11 - Direct Message Send
-12 - Channel Message Send
+- 0 - Unknown message type 
+- 1 - Join Request
+- 2 - Join Approve
+- 3 - Join Reject
+- 4 - Join Channel
+- 5 - Join Channel Accept
+- 6 - Join Channel Reject
+- 7 - Leave Channel
+- 8 - User Information Request
+- 9 - User Information Approve/Send
+- 10 - User Information Reject
+- 11 - Direct Message Send
+- 12 - Channel Message Send
 
 ## Initial client-server handshake
 The initial client-server handshake goes as follows:
