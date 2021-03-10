@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message SomeMessage {
+
+    message Data {
+        uint64 to = 1;
+        string message = 2;
+        uint64 user = 3;
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}
