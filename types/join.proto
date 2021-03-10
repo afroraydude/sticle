@@ -10,3 +10,23 @@ message JoinMessage {
     uint32 type = 1;
     Data data = 2;
 }
+
+message JoinAcceptMessage {
+
+    message Data {
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}
+
+message JoinDenyMessage {
+
+    message Data {
+        string reason = 1;
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}
+

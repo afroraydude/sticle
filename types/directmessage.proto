@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-message SomeMessage {
+message DirectMessage {
 
     message Data {
         uint64 to = 1;

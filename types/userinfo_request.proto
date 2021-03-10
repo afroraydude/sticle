@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message UserInfoRequestMessage {
+
+    message Data {
+        uint64 id = 1;
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}

@@ -17,6 +17,8 @@ combines multiple already existing protocols to facilitate its goals.
 0802
 ```
 
+
+See full spec of the above message [here](./types/message.proto)
 This message is a general "Join acccepted" message sent by a server to the
 client. All messages are protobuf serialized and then encrypted. The above
 message is not encrypted for reading's sake. Encrypted messages use PGP
@@ -36,6 +38,8 @@ message is not encrypted for reading's sake. Encrypted messages use PGP
 - 10 - User Information Reject
 - 11 - Direct Message Send
 - 12 - Channel Message Send
+- 13 - Message Send Approve
+- 14 - Message Send Deny
 
 ## Initial client-server handshake
 

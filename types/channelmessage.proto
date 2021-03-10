@@ -11,3 +11,22 @@ message ChannelMessage {
     uint32 type = 1;
     Data data = 2;
 }
+
+message ChannelMessageAcceptMessage {
+
+    message Data {
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}
+
+message ChannelMessageDenyMessage {
+
+    message Data {
+        string reason = 1;
+    }
+
+    uint32 type = 1;
+    Data data = 2;
+}
