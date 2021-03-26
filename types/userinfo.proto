@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+message UserInfoRequestMessage {
+
+    message Data {
+        string payload_encrypted = 1; // encrypted UserInfoRequestPayload
+    }
+
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message UserInfoRequestPayload {
+    uint64 id = 1; // user ID
+}
+
+message UserInfoAcceptMessage {
+
+    message Data {
+        string payload_encrypted = 1; // encrypted UserInfoAcceptPayload
+    }
+
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message UserInfoDenyMessage {
+
+    message Data {
+        string reason = 1;
+    }
+
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message UserInfoAcceptPayload {
+    uint64 id = 1; // user id
+    string key = 2; // user public key
+}

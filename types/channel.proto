@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+message JoinChannelRequestMessage {
+
+    message Data {
+        string signed_payload = 1; // JoinRequestPayload, signed
+    }
+
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message JoinChannelAcceptMessage {
+
+    message Data {
+        uint32 keepalive = 1;
+    }
+
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message JoinChannelDenyMessage {
+
+    message Data {
+        string reason = 1;
+    }
+
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message JoinChannelRequestPayload {
+    uint64 id = 1; // user ID
+    string channel = 2; // channel
+    optional string key = 3; // user key for private channels
+}
+
+message LeaveChannelMessage {
+
+    message Data {
+        string signed_payload = 1; // LeaveChannelPayload, signed
+    }
+
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message LeaveChannelPayload {
+  uint64 id = 1; // user ID 
+}

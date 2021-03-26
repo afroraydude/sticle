@@ -102,4 +102,5 @@ together with the goal of having a central server for authentication.
 Hub-to-server communication should not require more than the already
 existing [message types](#message-types) to function properl, However,
 if a community would like to do such that is understood as out-of-spec
-communication between servers.
+communication between servers. Hub-Server communication is given 
+message types 15-30 for their own use as needed.
