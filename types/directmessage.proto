@@ -3,11 +3,11 @@ syntax = "proto3";
 message DirectMessage {
 
     message Data {
-        uint64 to = 1;
-        string message = 2;
-        uint64 user = 3;
+        uint64 to = 1; // user ID to send to
+        string encrypted_message = 2; // message type
+        uint64 from = 3; // user ID to send from 
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
 }

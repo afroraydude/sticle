@@ -1,23 +1,23 @@
 syntax = "proto3";
 
-message JoinMessage {
+message JoinRequestMessage {
 
     message Data {
-        string id = 1;
-        string key = 2;
+        string payload_encrypted = 1; // Encrypted JoinRequestPayload
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
 }
 
 message JoinAcceptMessage {
 
     message Data {
+        uint32 keepalive = 1;
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
 }
 
 message JoinDenyMessage {
@@ -26,7 +26,11 @@ message JoinDenyMessage {
         string reason = 1;
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
 }
 
+message JoinRequestPayload {
+    uint64 id = 1; // user ID
+    string key = 2; // user key
+}

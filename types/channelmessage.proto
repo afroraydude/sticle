@@ -3,30 +3,30 @@ syntax = "proto3";
 message ChannelMessage {
 
     message Data {
-        string channel = 1;
-        string message = 2;
-        uint64 user = 3;
+        string channel = 1; // server channel
+        string message = 2; // message
+        uint64 user = 3; // user id of user sending from
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
 }
 
-message ChannelMessageAcceptMessage {
+message MessageAcceptMessage {
 
     message Data {
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
 }
 
-message ChannelMessageDenyMessage {
+message MessageDenyMessage {
 
     message Data {
-        string reason = 1;
+        string reason = 1; // deny reason 
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
 }

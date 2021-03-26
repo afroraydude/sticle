@@ -3,9 +3,13 @@ syntax = "proto3";
 message UserInfoRequestMessage {
 
     message Data {
-        uint64 id = 1;
+        string payload_encrypted = 1; // encrypted UserInfoRequestPayload
     }
 
-    uint32 type = 1;
-    Data data = 2;
+    uint32 type = 1; // message type
+    Data data = 2; // message data
+}
+
+message UserInfoRequestPayload {
+    uint64 id = 1; // user ID
 }
